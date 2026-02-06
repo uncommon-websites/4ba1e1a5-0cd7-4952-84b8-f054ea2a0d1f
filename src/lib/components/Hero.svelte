@@ -2,10 +2,6 @@
   import { onMount } from 'svelte';
 </script>
 
-<script lang="ts">
-  import { onMount } from 'svelte';
-</script>
-
 <section class="h-screen w-full overflow-hidden relative flex flex-col bg-dark-green text-pale-green">
     <!-- Background Placeholder (Simulating the video noise/texture mentioned in screenshot) -->
     <div class="absolute inset-0 w-full h-full -z-10 opacity-30 pointer-events-none" style="background: radial-gradient(circle at 50% 50%, #440000 0%, #220101 100%);"></div>
