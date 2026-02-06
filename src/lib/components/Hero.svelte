@@ -2,62 +2,100 @@
   import { onMount } from 'svelte';
 </script>
 
-<section class="relative bg-dark-green text-white pt-20 pb-0 overflow-hidden min-h-[110vh]">
-  <!-- Main Heading -->
-  <div class="container mx-auto px-6 mb-16 relative z-10">
-    <h1 class="text-[5rem] md:text-[6rem] lg:text-[7.5rem] leading-[0.9] font-serif text-center max-w-7xl mx-auto font-light tracking-tight">
-      Everyday <span class="italic font-normal">Beauty</span> — Gardens<br>
-      You'll Always Want to See.
-    </h1>
-  </div>
+<script lang="ts">
+  import { onMount } from 'svelte';
+</script>
 
-  <!-- Image Grid -->
-  <div class="relative w-full max-w-[1600px] mx-auto h-[900px]">
-    <!-- Top Left Image -->
-    <div class="absolute left-[5%] top-0 w-[22%] h-[450px] overflow-hidden">
-       <img src="https://images.unsplash.com/photo-1558904541-efa843a96f01?q=80&w=2000&auto=format&fit=crop" alt="Garden detail" class="w-full h-full object-cover opacity-70 hover:opacity-100 transition-opacity duration-500" />
-    </div>
+<section class="h-screen w-full overflow-hidden relative flex flex-col bg-dark-green text-pale-green">
+    <!-- Background Placeholder (Simulating the video noise/texture mentioned in screenshot) -->
+    <div class="absolute inset-0 w-full h-full -z-10 opacity-30 pointer-events-none" style="background: radial-gradient(circle at 50% 50%, #440000 0%, #220101 100%);"></div>
 
-    <!-- Center Text (featured work) -->
-    <div class="absolute left-[32%] top-12 text-[10px] uppercase tracking-widest border-b border-white/30 pb-1 font-medium text-lime-green/80">
-      (Featured Work)
-    </div>
+    <!-- Main Hero Content -->
+    <main class="flex-grow flex flex-col items-center justify-center relative z-10 -mt-10">
+        
+        <!-- Center Typography -->
+        <div class="text-center">
+            <!-- Line 1: Mixed Serif & Italic -->
+            <h1 class="text-5xl md:text-7xl lg:text-[7.5rem] leading-[0.9] text-pale-green whitespace-nowrap">
+                <span class="font-serif font-normal">Networked</span>
+                <span class="font-serif italic font-normal ml-2 md:ml-4">Autonomy</span>
+                <span class="font-thin mx-2 md:mx-6 opacity-80">—</span>
+                <span class="font-serif italic font-normal">Fleets</span>
+            </h1>
+            
+            <!-- Line 2: Sans Serif -->
+            <h2 class="text-5xl md:text-7xl lg:text-[7.5rem] leading-[0.9] font-normal mt-2 md:mt-4 text-pale-green">
+                Deploying at Mission Scale.
+            </h2>
+        </div>
 
-    <!-- Center Right Text -->
-    <div class="absolute left-[45%] top-12 max-w-[200px] text-sm font-light leading-relaxed opacity-80">
-      Designing Functional and Aesthetic Outdoor Green Environments.
-    </div>
+        <!-- Floating Elements -->
+        
+        <!-- Left Floating Text -->
+        <div class="absolute left-[15%] top-[65%] hidden lg:block">
+            <span class="text-[10px] font-bold tracking-[0.2em] uppercase opacity-90">(Battlefield Proven)</span>
+        </div>
 
-    <!-- Right Image -->
-    <div class="absolute right-[8%] top-[120px] w-[30%] h-[550px] overflow-hidden bg-gray-800">
-      <img src="https://images.unsplash.com/photo-1628744448840-55bdb2497bd4?q=80&w=2000&auto=format&fit=crop" alt="Modern garden path" class="w-full h-full object-cover opacity-70 hover:opacity-100 transition-opacity duration-500" />
-    </div>
+        <!-- Right Floating Text -->
+        <div class="absolute right-[12%] top-[65%] max-w-[280px] hidden lg:block text-left">
+            <p class="text-xl font-light leading-relaxed opacity-90">
+                Connecting autonomous robots into collaborative fleets via networked infrastructure.
+            </p>
+        </div>
 
-    <!-- Bottom Center Image -->
-    <div class="absolute left-[25%] bottom-[100px] w-[35%] h-[400px] overflow-hidden z-10 bg-gray-700 shadow-2xl">
-      <img src="https://images.unsplash.com/photo-1598902108854-10e335adac99?q=80&w=2000&auto=format&fit=crop" alt="Lush greenery" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity duration-500" />
-    </div>
-    
-    <!-- CTA Circle -->
-    <div class="absolute right-[15%] bottom-[250px] flex flex-col items-end z-20">
-      <p class="text-4xl font-serif italic mb-6 leading-[1.1] text-right w-full">
-        Interested<br>
-        in <span class="italic">Seeing</span><br>
-        More<br>
-        Projects?
-      </p>
-      <a href="/projects" class="w-16 h-16 rounded-full border border-white/30 flex items-center justify-center hover:bg-white hover:text-dark-green transition-all duration-300 group mt-2">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="rotate-45 group-hover:stroke-dark-green transition-colors">
-          <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </a>
-    </div>
-  </div>
+        <!-- "Video noise" placeholder elements -->
+        <div class="absolute bottom-32 left-8 flex items-center gap-2 opacity-50 text-xs">
+            <div class="w-4 h-4 rounded-sm bg-pale-green/20 flex items-center justify-center text-[10px]">+</div>
+            <span>Video noise</span>
+        </div>
 
-  <!-- Big Text Overlay at Bottom -->
-  <div class="absolute bottom-[-2vw] left-0 w-full overflow-hidden leading-none select-none pointer-events-none opacity-[0.15] mix-blend-overlay">
-    <span class="text-[24vw] font-bold text-lime-green whitespace-nowrap tracking-tighter block text-center transform translate-y-[35%]">
-      BartKolenda
-    </span>
-  </div>
+    </main>
+
+    <!-- Bottom Navigation & Controls -->
+    <div class="absolute bottom-8 left-0 w-full px-8 flex justify-between items-end z-20">
+        
+        <!-- Left: Inquiry Button -->
+        <button class="bg-pale-green text-dark-green px-6 py-3 rounded-full flex items-center gap-2 text-xs font-bold tracking-wide hover:bg-white transition-colors group">
+            REQUEST DEPLOYMENT
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+            </svg>
+        </button>
+
+        <!-- Center: Navigation Pills -->
+        <nav class="bg-nav-pill p-1.5 rounded-full flex gap-1 absolute left-1/2 transform -translate-x-1/2 shadow-lg">
+            <a href="/" class="bg-pale-green text-dark-green px-6 py-2.5 rounded-full text-xs font-bold tracking-wide">
+                HOME
+            </a>
+            <a href="#platform" class="text-pale-green px-6 py-2.5 rounded-full text-xs font-bold tracking-wide hover:bg-white/5 transition-colors">
+                PLATFORM
+            </a>
+            <a href="#missions" class="text-pale-green px-6 py-2.5 rounded-full text-xs font-bold tracking-wide hover:bg-white/5 transition-colors">
+                MISSIONS
+            </a>
+            <a href="#system" class="text-pale-green px-6 py-2.5 rounded-full text-xs font-bold tracking-wide hover:bg-white/5 transition-colors">
+                SYSTEM
+            </a>
+        </nav>
+
+        <!-- Right: Cookies & Scroll -->
+        <div class="flex items-center gap-6">
+            <!-- Cookie Banner -->
+            <div class="flex items-center gap-4 bg-transparent">
+                <span class="text-sm font-medium opacity-90 hidden md:inline">Autonomous systems data active</span>
+                <button class="bg-white text-dark-green px-5 py-2 rounded-full text-xs font-bold hover:bg-gray-200 transition-colors">
+                    Accept
+                </button>
+            </div>
+
+            <!-- Scroll Down Button -->
+            <button class="bg-pale-green text-dark-green w-12 h-12 rounded-full flex items-center justify-center hover:bg-white transition-colors hover:scale-105 transform duration-200">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <polyline points="19 12 12 19 5 12"></polyline>
+                </svg>
+            </button>
+        </div>
+    </div>
 </section>

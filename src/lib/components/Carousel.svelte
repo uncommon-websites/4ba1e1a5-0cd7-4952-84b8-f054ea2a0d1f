@@ -1,38 +1,38 @@
 <script lang="ts">
-  const projects = [
+  const segments = [
     {
       id: "01",
-      title: "Private Residential Gardens",
-      description: "Green spaces designed for individual homes, offering privacy, beauty, and a personal connection with nature.",
-      image: "https://images.unsplash.com/photo-1592595896551-12b371d546d5?q=80&w=1000&auto=format&fit=crop"
+      title: "Governments",
+      description: "Supporting national defense and security strategies of liberal democracies. Focus on mass robotics integration and autonomous fleet deployment.",
+      image: "https://images.unsplash.com/photo-1521791136064-7986c295944b?q=80&w=1000&auto=format&fit=crop"
     },
     {
       id: "02",
-      title: "Commercial Green Spaces",
-      description: "Functional and aesthetic landscapes for businesses, enhancing the environment for employees and clients.",
-      image: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1000&auto=format&fit=crop"
+      title: "Defense Forces",
+      description: "Allied military partnerships, full-stack command and control systems, frontline and border operations, and scale deployment capabilities.",
+      image: "/generated/image-a-fleet-of-small-autonomous-drones-flyin-1770410418484-2.webp"
     },
     {
       id: "03",
-      title: "Public Parks & Recreation",
-      description: "Community-focused designs that encourage social interaction and provide accessible green areas for everyone.",
-      image: "https://images.unsplash.com/photo-1562664348-2182b3712081?q=80&w=1000&auto=format&fit=crop"
+      title: "Enterprises",
+      description: "Farming applications, logistics operations, infrastructure maintenance, and multi-system solutions for competitive advantage.",
+      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1000&auto=format&fit=crop"
     }
   ];
 </script>
 
-<section class="bg-dark-green text-white py-24 px-6 md:px-12 overflow-hidden">
+<section id="platform" class="bg-dark-green text-pale-green py-24 px-6 md:px-12 overflow-hidden">
   <div class="max-w-7xl mx-auto">
     <!-- Top Label -->
     <div class="mb-12 border-b border-white/10 pb-4">
-      <span class="text-xs uppercase tracking-widest font-medium opacity-60">Range of Garden Types and Green Spaces</span>
+      <span class="text-xs uppercase tracking-widest font-medium opacity-60">Strategic Customer Segments & Markets</span>
     </div>
 
     <!-- Header & Nav -->
     <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
       <h2 class="text-4xl md:text-5xl font-light leading-tight max-w-3xl">
-        Support a <span class="font-serif italic text-lime-green">wide range of garden types and green spaces</span>,
-        tailored to every need, style, and setting — from private retreats to public landscapes.
+        Serving a <span class="font-serif italic text-primary-400">diverse range of sectors</span>,
+        from national defense to industrial automation — enabling collaborative autonomy at scale.
       </h2>
       
       <div class="flex gap-4">
@@ -51,17 +51,17 @@
 
     <!-- Carousel -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      {#each projects as project}
-        <div class="group relative aspect-[4/5] bg-gray-800 overflow-hidden cursor-pointer">
-          <img src={project.image} alt={project.title} class="w-full h-full object-cover opacity-60 group-hover:opacity-40 group-hover:scale-105 transition-all duration-700" />
+      {#each segments as segment}
+        <div class="group relative aspect-[4/5] bg-gray-900 overflow-hidden cursor-pointer">
+          <img src={segment.image} alt={segment.title} class="w-full h-full object-cover opacity-60 group-hover:opacity-40 group-hover:scale-105 transition-all duration-700" />
           
           <div class="absolute inset-0 p-8 flex flex-col justify-between">
-            <span class="text-xs font-mono opacity-60">({project.id})</span>
+            <span class="text-xs font-mono opacity-60">({segment.id})</span>
             
             <div class="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-              <h3 class="text-2xl font-light mb-4">{project.title}</h3>
+              <h3 class="text-2xl font-light mb-4">{segment.title}</h3>
               <p class="text-sm opacity-0 group-hover:opacity-80 transition-opacity duration-500 delay-100 font-light leading-relaxed">
-                {project.description}
+                {segment.description}
               </p>
             </div>
           </div>
